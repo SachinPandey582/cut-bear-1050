@@ -11,7 +11,10 @@ import {
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { ChevronDownIcon } from "@chakra-ui/icons";
+import { useSelector } from "react-redux";
 const Navbar = () => {
+    const store =useSelector((state)=>state.Cart)
+    console.log(store)
   return (
     <div className={NCss.Container}>
       <div className={NCss.first1}>
@@ -68,12 +71,26 @@ const Navbar = () => {
               Cart <ChevronDownIcon />
             </button>
             <div className={NCss.dropdown_content}>
-              <a href="/allproducts">Link 1</a>
-              <a href="/allproducts">Link 2</a>
-              <a href="/allproducts">Link 3</a>
-              <a href="/allproducts">Link 3</a>
-              <a href="/allproducts">Link 3</a>
-              <a href="/allproducts">Link 3</a>
+             <div className={NCss.firstDropDown1}>
+             {
+                store.data.map((el)=>(
+                
+                  <div className={NCss.cartslider}>
+                    <div>
+                 <img style={{width:"100%"}} className={NCss.zoomingEffect} src={el.imgOFProd} alt="" />
+                </div>
+                
+                <div>
+                     <Link to="/cart" key={el.id}>{el.NameOFProd}</Link>
+                   </div>
+
+                </div>
+                
+                 
+                )
+                )
+            }
+             </div>
             </div>
           </div>{" "}
           <div>

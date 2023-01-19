@@ -125,7 +125,28 @@ padding: 0;
     height: 100%;
     background-color: aqua;
 }
+.firstDropDown1{
+ width: 300px;
+ margin-left: -200px;
+  height: 100%;
+  font-size: smaller;
+  background-color: rgb(57, 187, 187);
+  color: black;
+  border: 2px solid;
+}
+.cartslider{
+  display: grid;
+  grid-template-columns: 25% 75%;
+  overflow: hidden;
+}
+.zoomingEffect{
+transition: transform 2s;
 
+}
+.zoomingEffect :hover{
+  
+  transform: scale(1.1);
+  }
 
 @media screen and (max-width: 992px) {
     .first{
