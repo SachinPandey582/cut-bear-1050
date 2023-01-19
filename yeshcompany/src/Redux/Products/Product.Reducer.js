@@ -3,6 +3,7 @@ import {
   FETCH_USER_REQUESTED,
   FETCH_USER_SUCCEEDED,
   SORTINGFROMHTL,
+  SORTINGFROMLTH,
 } from "./Product.Action.type";
 
 const initialState = {
@@ -11,7 +12,7 @@ const initialState = {
   error: "",
 };
 
-export const ProductReducer = (state = initialState, action) => {
+ export const ProductReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_USER_REQUESTED:
       return {
@@ -32,14 +33,23 @@ export const ProductReducer = (state = initialState, action) => {
       };
     case SORTINGFROMHTL:
       let newData = state.data.sort((a, b) => {
-        return b.Price - a.Price;
+        return b.Price1 - a.Price1;
       });
       return {
         ...state,
         data: newData,
       };
+      case SORTINGFROMLTH:
+        let newData1 = state.data.sort((a, b) => {
+          return a.Price1 - b.Price1;
+        });
+        return {
+          ...state,
+          data: newData1,
+        };
     default: {
       return state;
     }
   }
 };
+

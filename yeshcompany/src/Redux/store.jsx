@@ -1,5 +1,12 @@
-import { applyMiddleware, legacy_createStore } from "redux";
+import { applyMiddleware, combineReducers, legacy_createStore } from "redux";
 import thunk from "redux-thunk";
-import { ProductReducer } from "./Products/Product.Reducer";
+import { CartReducer } from "./Cart/Cart.Reducer";
 
-export const store=legacy_createStore(ProductReducer,applyMiddleware(thunk))
+import { ProductReducer } from "./Products/Product.Reducer";
+import { SigninReducer } from "./Signin/Signin.reducer";
+const rootReducer=combineReducers({
+    products:ProductReducer ,
+    signin:SigninReducer,
+    Cart:CartReducer
+})
+export const store=legacy_createStore(rootReducer,applyMiddleware(thunk))

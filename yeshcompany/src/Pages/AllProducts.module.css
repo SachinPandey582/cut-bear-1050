@@ -1,0 +1,22 @@
+.container{
+    display: grid;
+    grid-template-columns: 20% 70%;
+margin-bottom: 10%;
+height: 100%;    
+}
+
+.smallContainer{
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+    gap: 1%;
+    
+}
+.upperContainer{
+    display: grid;
+    grid-template-columns: 20% 70%;
+    padding: 2%;
+}
+.SideCon{
+    display: flex;
+    justify-content: space-evenly;
+}
