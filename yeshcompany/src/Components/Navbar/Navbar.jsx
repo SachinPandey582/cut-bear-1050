@@ -13,8 +13,11 @@ import { Link } from "react-router-dom";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import { useSelector } from "react-redux";
 const Navbar = () => {
+  const store1=useSelector((state)=>state.Login)
+  console.log(store1);
+  let member=store1.value.userName
     const store =useSelector((state)=>state.Cart)
-    console.log(store)
+    // console.log(store)
   return (
     <div className={NCss.Container}>
       <div className={NCss.first1}>
@@ -94,7 +97,8 @@ const Navbar = () => {
             </div>
           </div>{" "}
           <div>
-            <Link to={"/signup"}>Login</Link>
+            <Link to={"/signup"}>
+{store1.value.userName!==undefined ? `${member}` :"Login"}</Link>
           </div>
         </div>
       </div>

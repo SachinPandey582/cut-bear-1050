@@ -2,7 +2,7 @@ import { USER_SIGNIN_SUCCESS } from "./Signin.actionType"
 
 const initState1={
     loading:false,
-    data1:[],
+    data1:{},
    
 }
 

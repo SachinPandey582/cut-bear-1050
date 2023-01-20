@@ -87,7 +87,7 @@ padding: 0;
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
+  background-color: #e71515;
 }
 
 .dropdown_content {

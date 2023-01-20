@@ -2,8 +2,6 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link, useParams } from "react-router-dom";
-import { AddedToTheCart } from "../Redux/Cart/Cart.Action";
-import { fetchUsers } from "../Redux/Products/Product.Action";
 import { singleDataofCart } from "./Cart";
 import SPcss from "./SingleProduct.module.css";
  const SingleProduct = () => {

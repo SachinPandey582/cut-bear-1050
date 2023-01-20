@@ -40,6 +40,8 @@ const Signup = () => {
     console.log(signupData,"this is the data i requuire ")
     let {FirstName,LastName,password,email}=signupData
     if (!FirstName || !email || !password || !LastName) {
+      console.log("sachin is not Good");
+
       toast({
         title: "Sign Up Failed",
         description: "Fill all the Credentials",
@@ -49,6 +51,7 @@ const Signup = () => {
         position: "top",
       });
     } else {
+      console.log("sachin is Good");
 
       toast({
         title: "Account created",
