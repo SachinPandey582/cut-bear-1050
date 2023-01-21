@@ -2,6 +2,7 @@ import { ChakraProvider } from '@chakra-ui/react'
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Login from '../Components/Login/Login'
+import Payment1 from '../Components/Payment1'
 import Signup from '../Components/Signup/Signup'
 import Admin from '../Pages/Admin'
 import AllProducts from '../Pages/AllProducts'
@@ -15,8 +16,17 @@ const AllRoutes = () => {
   return (
     <div>
         <Routes>
-            <Route path='/' element={<Home/>}></Route>
-            <Route path='/allproducts' element={<AllProducts/>}></Route>
+            <Route path='/' element={
+              <ChakraProvider>
+            <Home/>
+              </ChakraProvider>
+            }></Route>
+            <Route path='/allproducts' element={
+<ChakraProvider>
+  <AllProducts/>
+</ChakraProvider>
+
+            }></Route>
             <Route path='/login' element={
             <ChakraProvider>
             <Login/>
@@ -28,16 +38,24 @@ const AllRoutes = () => {
               </ChakraProvider>
             }></Route>
             <Route path='/cart' element={
-            // <PrivateRoute>
-            <Cart/>
-            /* </PrivateRoute> */
+         
+                        <Cart/>
+        
+          
             }
             ></Route>
             <Route path='/allproducts/:id' element={<SingleProduct/>}></Route>
             <Route path='/bekar' element={<Bekar/>}></Route>
             <Route path='/admin' element={<Admin/>}></Route>
 
+            <Route path="/payment" element={
+            <ChakraProvider>
+            <Payment1/>
+            </ChakraProvider>
+            
+            } />
             <Route path="/:kljsdhnfs" element={<Bekar/>} />
+
         </Routes>
     </div>
   )

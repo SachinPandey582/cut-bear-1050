@@ -27,7 +27,7 @@ const initialState = {
       };
     case FETCH_USER_FAILED:
       return {
-        loading: false,
+        loading: false, 
         data: [],
         error: action.payload,
       };
