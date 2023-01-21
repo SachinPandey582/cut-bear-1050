@@ -1,3 +1,4 @@
+import { Box, Button, Heading } from '@chakra-ui/react'
 import axios from 'axios'
 import React from 'react'
 import { useSelector } from 'react-redux'
@@ -22,8 +23,10 @@ import { AddedToTheCart } from '../Redux/Cart/Cart.Action'
 const Cart = () => {
     const store =useSelector((state)=>state.Cart)
     console.log(store)
-
-
+let TotalCount=0
+for(let i=0;i<store.data.length;i++){
+    TotalCount+=store.data[i].Price1 *store.data[i].Quant
+}
    
 
 
@@ -36,14 +39,23 @@ const Cart = () => {
 <button>Go Back</button>
 
 </Link>
-        <h1>
+        <Box margin={"auto"}  w={"90%"}>
             {
                 store.data.map((el)=>(
                     <CartCard {...el} key={el.id}/>                )
                 )
             }
-        </h1>
-       
+        </Box>
+       <Box>
+<Heading>
+Total Price:-{TotalCount}
+
+</Heading>
+<Link to={"/payment"}>
+<Button border={"none"} p="10" bg={"red"}>Proceed To Buy</Button>
+</Link>
+       </Box>
+
     </div>
   )
 }

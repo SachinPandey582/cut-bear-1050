@@ -1,4 +1,4 @@
-import { Button } from "@chakra-ui/react";
+import { Box, Button, Center, Heading, HStack, Stack, Text } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { DecreaseQuantity, DeleteTheItem, IncreaseQuantity } from "../Redux/Cart/Cart.Action";
@@ -22,31 +22,47 @@ dispatch(DecreaseQuantity(id))
 
   },[dispatch])
   return (
-    <div
-      style={{
-        border: "2px solid",
-        display: "grid",
-        gridTemplateColumns: "30% 70%",
-      }}
+    <HStack border={"1px solid"} gap={5}   
     >
-      <div>
-        <img src={imgOFProd} alt="imageofProducts" />
-      </div>
-      <div>
-        <div>{NameOFProd}</div>
-        <h6>Price per Quantity:{Price}</h6>
-        <div style={{fontSize:"20px",textAlign:"left"}}>Total units</div>
 
-       <div style={{display:"flex"}}>
-        <div><Button p={10} onClick={()=>handledecreasedata(id)}>-</Button></div>
-        <div><Button p={10}>{Quant}</Button></div>
-       <div><Button p={10} onClick={()=>handleIncreaseData(id)}>+</Button></div>
-       </div>
+
+
+
+
+
+      <Box>
+        <img src={imgOFProd} alt="imageofProducts" />
+      </Box>
+
+
+
+
+      <Stack gap={17}>
+        <Heading color={"black"} fontWeight="bold">{NameOFProd}</Heading>
+      
+     <Center >
+     <HStack gap={45}  color="black" >
+      <Box>Price {Price}</Box>
+        <Box >Total units</Box>
+
+       <HStack gap={3} >
+        <Button p={10} border={"none"} onClick={()=>handledecreasedata(id)}>-</Button>
+        <Button border={"none"} p={10}>{Quant}</Button>
+      <Button border={"none"} p={10} onClick={()=>handleIncreaseData(id)}>+</Button>
+       </HStack>
        Total Price= {Quant * Price1}
-       <Button p={14} bg={"red"} color="white">Proceed to Buy</Button>
        <Button p={14} bg={"red"} color="white" onClick={()=>handleDelete(id)}>Delete the Item</Button>
-      </div>
-    </div>
+      </HStack>
+     </Center>
+       
+      </Stack>
+
+
+
+
+
+
+    </HStack>
   );
 };
 
