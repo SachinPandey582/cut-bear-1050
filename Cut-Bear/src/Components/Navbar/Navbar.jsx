@@ -57,7 +57,33 @@ const Navbar = () => {
         </Box>
         <HStack  gap={10} bg="#e71515" color={"white"} >
           <Text>Select Your Pin Code |</Text>
-          <Text>Cart |</Text>
+          <div className={NCss.dropdown}>
+    <button className={NCss.dropbtn}>
+      Cart <ChevronDownIcon />
+    </button>
+    <div className={NCss.dropdown_content}>
+     <div className={NCss.firstDropDown1}>
+     {
+        store.data.map((el)=>(
+        
+          <div className={NCss.cartslider}>
+            <div>
+         <img style={{width:"100%"}} className={NCss.zoomingEffect} src={el.imgOFProd} alt="" />
+        </div>
+        
+        <div>
+             <Link to="/cart" key={el.id}>{el.NameOFProd}</Link>
+           </div>
+
+        </div>
+        
+         
+        )
+        )
+    }
+     </div>
+    </div>
+  </div>
           <div>
     <Link to={"/signup"}>
 {store1.value.userName!==undefined ? `${member}` :"Login"}</Link>
@@ -97,80 +123,78 @@ function PlacementExample() {
   );
 }
 
-{
-  /* <div className={NCss.second}>
-<div className={NCss.Sidebar}>
-  <div className={NCss.fir}>
-    <div>
-      <PlacementExample />
-    </div>
-    <div>
-      <img
-        src="/Yesh Company.jpg"
-        alt="reliance"
-      />
-    </div>
-  </div>
-  <div className={NCss.sec}>
-    <div>plus</div>
-    <div className={NCss.dropdown}>
-      <button className={NCss.dropbtn}>
-        Telivision <ChevronDownIcon />
-      </button>
-      <div className={NCss.dropdown_content}>
-        <a href="/allproducts">Link 1</a>
-        <a href="/allproducts">Link 2</a>
-        <a href="/allproducts">Link 3</a>
-        <a href="/allproducts">Link 3</a>
-        <a href="/allproducts">Link 3</a>
-        <a href="/allproducts">Link 3</a>
-      </div>
-    </div>
-  </div>
-</div>
-<div className={NCss.RelianceImage}>
-  <h2 style={{fontWeight:"bold",fontSize:"30px"}}>YESH COMPANY</h2>
-</div>
-<div className={NCss.Input}>
-  <input
-    placeholder="Search Your Product here "
-    style={{ width: "100%", padding: "7px", borderRadius: "20px" }}
-    type="text"
-  />
-</div>
-<div className={NCss.first}>
-  <div>Deliver to Nainital 263139</div>{" "}
-  <div className={NCss.dropdown}>
-    <button className={NCss.dropbtn}>
-      Cart <ChevronDownIcon />
-    </button>
-    <div className={NCss.dropdown_content}>
-     <div className={NCss.firstDropDown1}>
-     {
-        store.data.map((el)=>(
-        
-          <div className={NCss.cartslider}>
-            <div>
-         <img style={{width:"100%"}} className={NCss.zoomingEffect} src={el.imgOFProd} alt="" />
-        </div>
-        
-        <div>
-             <Link to="/cart" key={el.id}>{el.NameOFProd}</Link>
-           </div>
 
-        </div>
+
+//   <div className={NCss.second}>
+// <div className={NCss.Sidebar}>
+//   <div className={NCss.fir}>
+//     <div>
+//       <PlacementExample />
+//     </div>
+//     <div>
+//       <img
+//         src="/Yesh Company.jpg"
+//         alt="reliance"
+//       />
+//     </div>
+//   </div>
+//   <div className={NCss.sec}>
+//     <div>plus</div>
+//     <div className={NCss.dropdown}>
+//       <button className={NCss.dropbtn}>
+//         Telivision <ChevronDownIcon />
+//       </button>
+//       <div className={NCss.dropdown_content}>
+//         <a href="/allproducts">Link 1</a>
+//         <a href="/allproducts">Link 2</a>
+//         <a href="/allproducts">Link 3</a>
+//         <a href="/allproducts">Link 3</a>
+//         <a href="/allproducts">Link 3</a>
+//         <a href="/allproducts">Link 3</a>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+// <div className={NCss.RelianceImage}>
+//   <h2 style={{fontWeight:"bold",fontSize:"30px"}}>YESH COMPANY</h2>
+// </div>
+// <div className={NCss.Input}>
+//   <input
+//     placeholder="Search Your Product here "
+//     style={{ width: "100%", padding: "7px", borderRadius: "20px" }}
+//     type="text"
+//   />
+// </div>
+// <div className={NCss.first}>
+//   <div>Deliver to Nainital 263139</div>{" "}
+//   <div className={NCss.dropdown}>
+//     <button className={NCss.dropbtn}>
+//       Cart <ChevronDownIcon />
+//     </button>
+//     <div className={NCss.dropdown_content}>
+//      <div className={NCss.firstDropDown1}>
+//      {
+//         store.data.map((el)=>(
+        
+//           <div className={NCss.cartslider}>
+//             <div>
+//          <img style={{width:"100%"}} className={NCss.zoomingEffect} src={el.imgOFProd} alt="" />
+//         </div>
+        
+//         <div>
+//              <Link to="/cart" key={el.id}>{el.NameOFProd}</Link>
+//            </div>
+
+//         </div>
         
          
-        )
-        )
-    }
-     </div>
-    </div>
-  </div>{" "}
-  <div>
-    <Link to={"/signup"}>
-{store1.value.userName!==undefined ? `${member}` :"Login"}</Link>
-  </div>
-</div>
-</div> */
-}
+//         )
+//         )
+//     }
+//      </div>
+//     </div>
+//   </div>
+  
+// </div>
+// </div> 
+

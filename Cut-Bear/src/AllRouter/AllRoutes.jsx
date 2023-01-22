@@ -9,9 +9,8 @@ import AllProducts from '../Pages/AllProducts'
 import Bekar from '../Pages/bekar'
 import Cart from '../Pages/Cart'
 import Home from '../Pages/Home'
-import PrivateRoute from '../Pages/PrivateRoute'
 import SingleProduct from '../Pages/SingleProduct'
-
+import PrivateRoute from "../Pages/PrivateRoute"
 const AllRoutes = () => {
   return (
     <div>
@@ -44,7 +43,12 @@ const AllRoutes = () => {
           
             }
             ></Route>
-            <Route path='/allproducts/:id' element={<SingleProduct/>}></Route>
+            <Route path='/allproducts/:id' element={
+           <PrivateRoute>
+           <SingleProduct/>
+           </PrivateRoute>
+            
+            }></Route>
             <Route path='/bekar' element={<Bekar/>}></Route>
             <Route path='/admin' element={<Admin/>}></Route>
 
