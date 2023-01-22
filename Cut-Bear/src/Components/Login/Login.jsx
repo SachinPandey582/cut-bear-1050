@@ -27,11 +27,11 @@ if(data.email==="sachinpandey582@gmail.com" && data.password==="tussiadminho"){
   navigate("/bekar")
 }
    if(store3.data1.email===data.email && store3.data1.password ===data.password){
-     alert("hi marjawa ")
+     alert("Welcome You are authenitcated ")
      dispatch(LoginSuccess(data))
 navigate("/")
     }else{
-      alert("mar hi ja ");
+      alert("Welcome you are not  Authenticated ");
     }
   }
   

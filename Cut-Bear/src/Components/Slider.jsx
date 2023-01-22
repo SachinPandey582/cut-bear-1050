@@ -6,6 +6,7 @@ import {
   IoIosArrowDroprightCircle,
   IoIosArrowDropleftCircle,
 } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 function NextArrow(props) {
   console.log(props);
@@ -121,11 +122,17 @@ const RealExampleCarousel = () => {
                 h="220px"
                 borderRadius={"10px"}
               />
-              <Text fontWeight={"bold"} fontSize="15px" >{el.NameOFProd}</Text>
+             <Link to={"/allproducts"}>
+             <Text fontWeight={"bold"} fontSize="15px" >{el.NameOFProd}</Text>
+             </Link>
+
         Price-  {el.Price}
         <br />
         <HStack >
+        
+        <Link to={"/cart"}>
         <Button>Add To Cart</Button>
+        </Link>
         <Button>Add To WishList</Button>
         </HStack>
             </Box>
