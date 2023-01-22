@@ -31,7 +31,7 @@ if(data.email==="sachinpandey582@gmail.com" && data.password==="tussiadminho"){
      dispatch(LoginSuccess(data))
 navigate("/")
     }else{
-      alert("mar hi ja ");
+      alert("Welcome you are Authenticated ");
     }
   }
   

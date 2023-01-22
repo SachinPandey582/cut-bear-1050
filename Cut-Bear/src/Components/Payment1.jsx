@@ -9,7 +9,8 @@ import {
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { useSelector } from "react-redux";
-import { Alert, AlertDescription, AlertDialog, AlertDialogBody, AlertDialogCloseButton, AlertDialogContent, AlertDialogFooter, AlertDialogHeader, AlertDialogOverlay, AlertIcon, AlertTitle, Button, CircularProgress, HStack, PinInput, PinInputField, useDisclosure } from "@chakra-ui/react";
+import { Alert, AlertDescription, AlertDialog, AlertDialogBody, AlertDialogCloseButton, AlertDialogContent, AlertDialogFooter, AlertDialogHeader, AlertDialogOverlay, AlertIcon, AlertTitle, Button, CircularProgress, Heading, HStack, PinInput, PinInputField, useDisclosure } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 export default function Payment1() {
   const [loader,setLoader]=useState(false)
   const [loader1,setLoader1]=useState(false)
@@ -49,6 +50,11 @@ return <>
     Thanks for shopping with our Company, see you soon.
   </AlertDescription>
 </Alert>
+<Link to={"/"}>
+<Button>
+  Go Back To HomePage
+</Button>
+</Link>
 </>
 }
   return (
@@ -62,7 +68,7 @@ return <>
       </div>
       <MDBRow>
         <MDBCol md="7" lg="7" xl="6" className="mb-4 mb-md-0">
-          <h5 className="mb-0 text-success">{TotalCount}</h5>
+          <Heading className="mb-0 text-success">{TotalCount}</Heading>
           <h5 className="mb-3">Diabites Pump &amp; Supplies</h5>
           <div>
             <div className="d-flex justify-content-between">
@@ -227,7 +233,7 @@ return <>
             </div>
             <hr />
             <div className="d-flex justify-content-between mt-2">
-              <span>Total </span> <span class="text-success">$85.00</span>
+              <span>Total </span> <span class="text-success">{TotalCount}</span>
             </div>
           </div>
         </MDBCol>

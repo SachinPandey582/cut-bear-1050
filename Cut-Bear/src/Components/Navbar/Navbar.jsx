@@ -58,7 +58,10 @@ const Navbar = () => {
         <HStack  gap={10} bg="#e71515" color={"white"} >
           <Text>Select Your Pin Code |</Text>
           <Text>Cart |</Text>
-          <Text>Login</Text>
+          <div>
+    <Link to={"/signup"}>
+{store1.value.userName!==undefined ? `${member}` :"Login"}</Link>
+  </div>
         </HStack>
       </HStack>
 
