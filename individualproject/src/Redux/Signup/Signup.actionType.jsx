@@ -1,2 +1,0 @@
-export const SIGN_SUCCESS="SIGN_SUCCESS"
-export const SIGN_FAILURE="SIGN_FAILURE"
