@@ -1,4 +1,6 @@
-what i learned 
+<h1>
+what i learned
+</h1> 
 react redux - 
    cart | login | signin | products
 css -
@@ -29,5 +31,10 @@ i remeber asking silly question from my IA that hurt when he said silly so thank
  
  
  4th day
- again this day was full of problems but i 
+ again this day was full of problems but i managed to pull it out 
+ 
+ 5th day - 
+ i messed up here so i changed the navbar with chakra which cause me lost of responsiveness 
+ 
+ But overall i was successfully able to do that much thing hoping to do better in the future 
  
