@@ -1,4 +1,12 @@
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
     <h1>what i learned</h1>
     react redux - cart | login | signin | products css - css module for each
     page bootstrap for individual component chakra ui for individual component
@@ -80,10 +88,5 @@
     responsiveness But overall i was successfully able to do that much thing
     hoping to do better in the future
 
-
-
-
-
-
-
-
+   </body>
+</html>
