@@ -38,3 +38,5 @@ i remeber asking silly question from my IA that hurt when he said silly so thank
  
  But overall i was successfully able to do that much thing hoping to do better in the future 
  
+ <h1> Guide</h1>
+ first you will see the home page where there is everything you need to see in the homepage navbar footer and the crousels
