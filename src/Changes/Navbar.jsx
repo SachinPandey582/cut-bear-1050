@@ -20,12 +20,12 @@ const NavbarNew = () => {
     <div className="MainContainer">
       <div className="TopNavbar">
         <div className="leftTopNavbar">
-          {ham ? (
-            <div className="hamburger">
+          { !ham ? (
+            <div onClick={()=>setHam(!ham)} className="hamburger">
               <GiHamburgerMenu />{" "}
             </div>
           ) : (
-            <div className="cross">
+            <div style={{fontWeight:"bolder"}} onClick={()=>setHam(!ham)} className="cross">
               <RxCross1 />{" "}
             </div>
           )}

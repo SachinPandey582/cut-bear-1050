@@ -1,0 +1,51 @@
+.Container{
+    display: flex;
+    justify-content: space-evenly;
+    color: aliceblue;
+    background-color: #003380;
+    font-size: 12px;
+    padding: 4px 2px 4px 2px;
+    font-family: sans-serif;
+}
+.Container >div:hover {
+    padding: 4px 3px 4px 3px;
+    background-color: red;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 576px) {
+    .Container{
+        display: none;
+    }
+  }
+  
+  /* Extra small devices (phones) */
+  @media only screen and (max-width: 576px) {
+    .Container{
+        display: none;
+    }
+  }
+  
+  /* Small devices (tablets) */
+  @media only screen and (min-width: 576px) and (max-width: 768px) {
+    .Container{
+        display: none;
+    }
+  }
+  
+  /* Medium devices (laptops, desktops) */
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    .Container{
+        display: none;
+    }
+  }
+  
+  /* Large devices (large laptops, desktops) */
+  @media only screen and (min-width: 992px) and (max-width: 1200px) {
+
+      
+  }
+  
+  /* Extra large devices (TVs) */
+  @media only screen and (min-width: 1200px) {
+   
+  }
