@@ -1,4 +1,4 @@
-import { Box, Button, Heading, Input, VStack } from "@chakra-ui/react";
+import { Box, Button, Heading, Input, Text, VStack } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -28,10 +28,12 @@ if(data.email==="sachinpandey582@gmail.com" && data.password==="tussiadminho"){
 }
    if(store3.data1.email===data.email && store3.data1.password ===data.password){
      alert("Welcome You are authenitcated ")
+
      dispatch(LoginSuccess(data))
 navigate("/")
     }else{
       alert("Welcome you are not  Authenticated ");
+      navigate("/signup")
     }
   }
   
@@ -83,7 +85,9 @@ navigate("/")
           {" "}
           LOGIN
         </Button>
+  
       </VStack>
+      
  </form>
     </Box>
   );

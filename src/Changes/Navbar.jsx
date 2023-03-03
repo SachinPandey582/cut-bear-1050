@@ -13,9 +13,15 @@ import {
   InputRightElement,
 } from "@chakra-ui/react";
 import { CheckIcon } from "@chakra-ui/icons";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 const NavbarNew = () => {
   const [ham, setHam] = useState(false);
-
+  const store1 = useSelector((state) => state.Login);
+  console.log(store1);
+  const navigate=useNavigate()
+  let member = store1.value.userName;
+  const store = useSelector((state) => state.Cart);
   return (
     <div className="MainContainer">
       <div className="TopNavbar">
@@ -51,13 +57,18 @@ const NavbarNew = () => {
               type="text"
               placeholder="Search here..."
             />
-            <button className="inputofNavbar1">
+            {/* <button className="inputofNavbar1">
               <BsSearch />
-            </button>
+            </button> */}
           </div>
 
           <div className="text">
-            Select your Pin Code | <BsFillCartFill /> Cart | <RxAvatar /> Login
+            <div className="text"> Select your Pin Code |</div>
+            <div onClick={()=>navigate("/cart")} className="text"><BsFillCartFill /> Cart | </div>
+            <div onClick={()=>navigate("/login")} className="text"> 
+            {store1.value.userName!==undefined ? `${member}` :` Login`}
+              </div>
+         
           </div>
 
           <div className="text1">

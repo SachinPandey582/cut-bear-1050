@@ -1,10 +1,12 @@
 
+import { Box, ChakraProvider } from "@chakra-ui/react";
 import AllRoutes from "./AllRouter/AllRoutes";
 import "./App.css";
 import BelowNavbar from "./Changes/BelowNavbar";
+import Home from "./Pages/Home"
 import NavbarNew from "./Changes/Navbar";
-import DropDownNavbar from "./Components/Navbar/DropDownNavbar";
-import Navbar from "./Components/Navbar/Navbar";
+
+
 
 
 
@@ -20,6 +22,9 @@ function App() {
      <AllRoutes/> */}
      <NavbarNew/>
      <BelowNavbar/>
+    
+     <AllRoutes/>
+   
     </div>
   );
 }

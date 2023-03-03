@@ -1,0 +1,10 @@
+.HomeContainer,.HomeTopImage{
+    width: 100%;
+}
+.HomeTopImage>img{
+  width: 100%;
+}
+.HomeHeading{
+  padding: 2rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}

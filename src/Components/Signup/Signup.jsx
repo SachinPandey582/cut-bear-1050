@@ -83,7 +83,7 @@ const Signup = () => {
       h="600px"
     >
       <form onSubmit={handleSubmit}>
-        <VStack>
+        <VStack gap={5}>
           <Text fontSize={"lg"} fontWeight="bolder">
             Register New Account
           </Text>
@@ -112,7 +112,7 @@ const Signup = () => {
             Your email address will be used to send order invoice, order updates
             etc
           </Text>
-          <Button
+          {/* <Button
             value={signupData.password}
             onChange={handleChange}
             name="password"
@@ -121,11 +121,11 @@ const Signup = () => {
           >
             {" "}
             Verify Email
-          </Button>
+          </Button> */}
           <Input name="password"
           value={signupData.password}
           onChange={handleChange}
-           placeholder="Mobile Number" border={"1px solid grey"}></Input>
+           placeholder="Enter Your Password" border={"1px solid grey"}></Input>
           <Text fontSize="xs">
             Your mobile number will be used to avail benefits such as Jio Mart
             Cashback and ROne Loyality Points and receive quick notifications.
@@ -134,7 +134,7 @@ const Signup = () => {
             Proceed
           </Button>
           <Text>
-            AlReady Registered ?{" "}
+            AlReady Registered ?
             <Text fontSize="lg" fontWeight={"bolder"}>
               Login
             </Text>
