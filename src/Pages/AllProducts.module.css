@@ -1,6 +1,6 @@
 .container{
     display: grid;
-    grid-template-columns: 20% 70%;
+    
 margin-bottom: 10%;
 height: 100%;    
 }
@@ -13,10 +13,43 @@ height: 100%;
 }
 .upperContainer{
     display: grid;
-    grid-template-columns: 20% 70%;
+   
     padding: 2%;
 }
 .SideCon{
     display: flex;
     justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 576px) {
+    .smallContainer{
+        display: grid;
+        grid-template-columns:repeat(1,1fr);
+        gap: 1%;
+        
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+    .smallContainer{
+        display: grid;
+        grid-template-columns:repeat(2,1fr);
+        gap: 1%;
+        
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .smallContainer{
+        display: grid;
+        grid-template-columns:repeat(3,1fr);
+        gap: 1%;
+        
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .smallContainer{
+        display: grid;
+        grid-template-columns:repeat(4,1fr);
+        gap: 1%;
+        
+    }
 }

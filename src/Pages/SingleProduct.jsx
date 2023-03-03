@@ -9,7 +9,7 @@ import SPcss from "./SingleProduct.module.css";
   const params = useParams();
   const getSingleProductData = async () => {
     const response = await axios
-      .get(`http://localhost:8080/mobiles/${params.id}`)
+      .get(`https://abracadabra-4mt6.onrender.com/mobiles/${params.id}`)
       .then((res) => getsprod(res.data));
     //   console.log(response)
   };

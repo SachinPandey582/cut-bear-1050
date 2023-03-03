@@ -9,7 +9,7 @@ import { AddedToTheCart } from '../Redux/Cart/Cart.Action'
         return function (dispatch){
             
            
-            axios.get(`http://localhost:8080/mobiles/${id}`)
+            axios.get(`https://abracadabra-4mt6.onrender.com/mobiles/${id}`)
             .then(response=>{
                 let users=response.data
                 dispatch(AddedToTheCart(users))

@@ -29,7 +29,7 @@ const Home = () => {
 
         <HStack>
           <Box w={"20%"} overflow="hidden">
-            <Image
+            <Image display={{sm:"none",md:"none"}}
               h={"350px"}
               _hover={{ transform: "scale(1.1)" }}
               transition={"transform 2s"}

@@ -44,7 +44,7 @@ export const sorttheuserpricefromlth=()=>{
 export const fetchUsers =()=>{
     return function (dispatch){
         dispatch(fetchuserRequested())
-        axios.get("http://localhost:8080/mobiles")
+        axios.get("https://abracadabra-4mt6.onrender.com/mobiles")
         .then(response=>{
             let users=response.data
             dispatch(fetchuserSuccess(users))

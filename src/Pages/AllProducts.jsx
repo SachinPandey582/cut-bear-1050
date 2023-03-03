@@ -38,7 +38,7 @@ const AllProducts = () => {
   return (
     <div>
       <div className={MSCss.upperContainer}>
-        <Heading>Filters</Heading>
+
         <div className={MSCss.SideCon}>
           <Box fontSize={"20px"}>showing 1 - {store.data.length} Products of 12078 Products</Box>
           <div>Sort By:-</div>
@@ -51,23 +51,7 @@ const AllProducts = () => {
         </div>
       </div>
       <div className={MSCss.container}>
-        <div style={{ border: "2px solid",textAlign:"left" }}>
-        <Heading>Filter By Indian Brand</Heading>
-          <Box fontSize={"20px"}><input type="checkbox" /> SamSung </Box>
-          <Box fontSize={"20px"}><input type="checkbox" /> SamSung </Box>
-          <Box fontSize={"20px"}><input type="checkbox" /> SamSung </Box>
-          <Box><input type="checkbox" /> SamSung </Box>
-          <Box fontSize={"20px"}><input type="checkbox" /> SamSung </Box>
-          <Heading>Filter By Chinese Brand</Heading>
-          <Box><input type="checkbox" /> SamSung </Box>
-          <Box fontSize={"20px"}><input type="checkbox" /> SamSung </Box>
-          <Box fontSize={"20px"}><input type="checkbox" /> SamSung </Box>
-          <Box fontSize={"20px"}><input type="checkbox" /> SamSung </Box>
-          <Box fontSize={"20px"}><input type="checkbox" /> SamSung </Box>
-          <Box fontSize={"20px"}><input type="checkbox" /> SamSung </Box>
-          <Box fontSize={"20px"}><input type="checkbox" /> SamSung </Box>
-
-        </div>
+       
         <div className={MSCss.smallContainer}>
           {store.data.map((el) => (
             <Link to={`/allproducts/${el.id}`}>

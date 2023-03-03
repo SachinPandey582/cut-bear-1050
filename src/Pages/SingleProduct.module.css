@@ -5,9 +5,10 @@
     gap: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
+
 }
 .container>div {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
 }
 .SecondContainer{
     display: grid;
@@ -18,7 +19,6 @@
     line-height: 120%;
     text-align: left;
     margin-left: 10%;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin: 2%;
     padding: 3%;
 
@@ -29,7 +29,6 @@
 .AddToCart{
     text-align: left;
     padding: 2%;    
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .AddToCart >div{
     display: flex;

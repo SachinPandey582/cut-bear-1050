@@ -89,7 +89,7 @@ const RealExampleCarousel = () => {
 
   let getCrousaldata = async () => {
     try {
-      let res = await axios.get("http://localhost:8080/mobiles");
+      let res = await axios.get("https://abracadabra-4mt6.onrender.com/mobiles");
       let data = await res.data;
       // console.log(data,"dataaaa")
       setscroller(data);
