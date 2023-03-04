@@ -1,4 +1,4 @@
-import { Box, Button, HStack, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Center, Heading, HStack, Image, Text } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
@@ -106,28 +106,37 @@ const RealExampleCarousel = () => {
   // console.log(scroller,"producctssss")
 
   return (
-    <Box bg={"white"} px={10} py={8} gap={10}>
+    <HStack gap={5} bg={"white"} px={10} py={8} >
       {/* <h1>CategoriesCarousel</h1> */}
 
       {isError !== "" && <h1>{isError}</h1>}
 
-      <Box w="100%" margin={"auto"}>
+      <Box  w="100%" margin={"auto"}>
         <Slider {...settings}>
           {scroller.map((el) => (
-            <Box key={el.id} mr={5}>
+            <Box  alignContent="center"  alignItems={"center"} key={el.id} mr={5}>
+            
               <Image
                 src={el.imgOFProd}
                 alt="immages_real"
-                w="120%"
-                h="220px"
+                w="100%"
+                
                 borderRadius={"10px"}
               />
+              
+              
+             
              <Link to={"/allproducts"}>
-             <Text fontWeight={"bold"} fontSize="15px" >{el.NameOFProd}</Text>
+            <Center>
+            <Text w="90%" fontWeight={"bold"} fontSize="15px" >{el.NameOFProd}</Text>
+            </Center>
              </Link>
 
-        Price-  {el.Price}
+        <Box marginLeft={"10%"}>
+        Price  {el.Price}
+        </Box>
         <br />
+        <Center>
         <HStack >
         
         <Link to={"/cart"}>
@@ -135,11 +144,12 @@ const RealExampleCarousel = () => {
         </Link>
         <Button>Add To WishList</Button>
         </HStack>
+        </Center>
             </Box>
           ))}
         </Slider>
       </Box>
-    </Box>
+    </HStack>
   );
 };
 

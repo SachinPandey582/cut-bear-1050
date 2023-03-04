@@ -4,7 +4,8 @@ import SCss from "./SCard1.module.css";
 const SCard1 = (props) => {
   const { image, NameOFProd, Price, ProdCut } = props;
   return (
-    <Box className={SCss.card}>
+   <Center>
+     <Box  className={SCss.card}>
       <Box className={SCss.img}>
        <Center>
        <Image w={250} src={image} alt="products" />
@@ -25,6 +26,7 @@ const SCard1 = (props) => {
         <Box className={SCss.names}>WishList</Box>
       </Box>
     </Box>
+   </Center>
   );
 };
 
