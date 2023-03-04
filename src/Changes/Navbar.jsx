@@ -11,11 +11,14 @@ import {
   InputGroup,
   InputLeftElement,
   InputRightElement,
+  useDisclosure,
 } from "@chakra-ui/react";
 import { CheckIcon } from "@chakra-ui/icons";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 const NavbarNew = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const btnRef = React.useRef()
   const [ham, setHam] = useState(false);
   const store1 = useSelector((state) => state.Login);
   console.log(store1);

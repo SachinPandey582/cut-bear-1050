@@ -39,7 +39,7 @@ for(let i=0;i<store.data.length;i++){
 <button>Go Back</button>
 
 </Link>
-        <Box margin={"auto"}  w={"90%"}>
+        <Box >
             {
                 store.data.map((el)=>(
                     <CartCard {...el} key={el.id}/>                )
