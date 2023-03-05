@@ -1,4 +1,4 @@
-import { Box, HStack, Image, Stack } from "@chakra-ui/react";
+import { Box, Center, HStack, Image, Stack } from "@chakra-ui/react";
 import React from "react";
 
 import { Carousel } from "../Components/Carousel";
@@ -29,13 +29,16 @@ const Home = () => {
 
         <HStack>
           <Box w={"20%"} overflow="hidden">
-            <Image display={{sm:"none",md:"none"}}
+         <Center>
+         <Image display={{sm:"none",md:"none"}}
               h={"350px"}
               _hover={{ transform: "scale(1.1)" }}
               transition={"transform 2s"}
               src="https://www.reliancedigital.in/medias/Neckband-True-Wireless-19-01-2023.jpg?context=bWFzdGVyfGltYWdlc3w0MjQ1OXxpbWFnZS9qcGVnfGltYWdlcy9oN2EvaDEyLzk5NTA0NTA0MTc2OTQuanBnfDAxOWRiN2Q5NWE2YmRjY2RhYWUyZjkwOGU2M2NlYzA5MzFlMzI4YjJlOGQ4OTc5NTQ2M2VkYjlmMTU5NmMwNzM"
               alt="ajkshd"
+              objectFit={"cover"}
             ></Image>
+         </Center>
           </Box>
           <Box w={"79%"}>
             <RealExampleCarousel />

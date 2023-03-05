@@ -4,13 +4,14 @@ import SCss from "./SCard1.module.css";
 const SCard1 = (props) => {
   const { image, NameOFProd, Price, ProdCut } = props;
   return (
-    <Box className={SCss.card}>
+   <Center>
+     <Box  className={SCss.card}>
       <Box className={SCss.img}>
        <Center>
        <Image w={250} src={image} alt="products" />
        </Center>
-      </Box>
-      <Text fontSize={"18px"}  color="black" className={SCss.prodName} align={"left"}>
+      </Box >
+      <Text fontSize={"20px"}  color="black" className={SCss.prodName} align={"left"}>
         {NameOFProd}
       </Text>
       <span className={SCss.prodPrice} align={"left"}>
@@ -25,6 +26,7 @@ const SCard1 = (props) => {
         <Box className={SCss.names}>WishList</Box>
       </Box>
     </Box>
+   </Center>
   );
 };
 

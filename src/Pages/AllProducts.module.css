@@ -20,7 +20,17 @@ height: 100%;
     display: flex;
     justify-content: space-evenly;
 }
+.inputCheck{
+    transform: scale(2);
+    margin-right: 10px;
 
+}
+
+.FilterCon{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
 @media only screen and (max-width: 576px) {
     .smallContainer{
         display: grid;
