@@ -73,7 +73,7 @@ const AllProducts = () => {
     dispatch(fetchUsers());
    
     if (priceFilter1.under5000 && filter) {
-      // const filteredProducts = products.filter(product => product.price >= 20 && product.price <= 40);
+    
       getData1();
     } else if (priceFilter1.between_20000_to_50000 && filter) {
       getData2();
