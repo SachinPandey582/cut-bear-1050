@@ -10,8 +10,8 @@ const SCard1 = (props) => {
        <Center>
        <Image w={250} src={image} alt="products" />
        </Center>
-      </Box>
-      <Text fontSize={"18px"}  color="black" className={SCss.prodName} align={"left"}>
+      </Box >
+      <Text fontSize={"20px"}  color="black" className={SCss.prodName} align={"left"}>
         {NameOFProd}
       </Text>
       <span className={SCss.prodPrice} align={"left"}>

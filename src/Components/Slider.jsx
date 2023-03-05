@@ -1,4 +1,4 @@
-import { Box, Button, Center, Heading, HStack, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Center, HStack, Image, Text } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";

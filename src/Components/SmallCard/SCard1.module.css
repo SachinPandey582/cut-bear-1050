@@ -24,9 +24,13 @@
 }
 .prodName{
 color: blue;
-font-size: 10px;
+font-size: 20px;
 cursor: pointer;
-
+overflow: hidden;
+  text-overflow: ellipsis;
+height: 90px;
+  text-align:justify;
+  word-break:keep-all;
 }
 .prodName:hover{
     color: red;
